@@ -111,6 +111,7 @@ input{
 .page__wrapper{
   overflow: hidden;
   position: relative;
+  min-height: 100vh;
 }
 
 .site-container{
@@ -237,11 +238,14 @@ input{
     left: 15px;
     width: 200px;
     padding: 0 10px 0 20px;
+
+    *{
+      line-height: 18px;
+    }
   }
 
   &__submenu-item{
     position: relative;
-    padding: 9px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     &:last-child{
@@ -278,7 +282,6 @@ input{
 
   &__submenu2-item{
     position: relative;
-    padding: 9px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     &:last-child{
@@ -307,7 +310,6 @@ input{
   }
 
   &__submenu3-item{
-    padding: 9px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     &:last-child{
@@ -355,24 +357,10 @@ input{
 
 .has-submenu{
 
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    left: -15px;
-    width: 2px;
-    top: 0;
-    background: #FFC700;
-    opacity: 0;
-    transition: 0.3s;
+  &.header__submenu-item{
+
   }
 
-  &:hover{
-    &:before{
-      opacity: 1;
-    }
-  }
 
   &:after{
     content: '';
@@ -384,6 +372,50 @@ input{
     right: 10px;
     background: #FFC700;
     border-radius: 50%;
+  }
+
+}
+
+.has-submenu-first{
+  li{
+    padding: 9px 0;
+
+    a{
+      display: inline-block;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      height: calc(100% + 1px);
+      left: -20px;
+      width: 2px;
+      top: 0;
+      background: #FFC700;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    &:hover{
+      &:before{
+        opacity: 1;
+      }
+    }
+
+    li:before{
+      display: none;
+    }
+  }
+  li:first-child{
+    padding-top: 12px;
+
+    &:after{
+      top: 20px;
+    }
+  }
+  li:last-child{
+    padding-bottom: 12px;
   }
 }
 
