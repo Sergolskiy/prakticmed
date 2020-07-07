@@ -1,0 +1,32 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Service page";
+  - var pageClass = "";
+  - var pageActive = "servicepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+    .motivated.b-lazy(data-blazy="./img/motivated-bg.webp")
+      .motivated__inner.site-container
+        .motivated__content
+          .motivated__title.site-title2 Мотивация зависимых
+          .motivated__txt
+            p
+              strong Не знаете как уговорить близкого начать лечение? Мы поможем! Специалисты центра по мотивации гарантированно убедят зависимого начать лечение.
+
+          .motivated__row
+            .motivated__phone
+              a(href="tel:88003012803") тел. 8 (800) 301-28-03
+            .motivated__btn
+              a(href="#").motivated__btn-i.site-btn.site-btn--red.site-btn--img Отправить
+
+          .motivated__caption.
+            Позвоните по телефону горячей линии и получите бесплатную консультацию нарколога. Мы работаем круглосуточно 24/7
