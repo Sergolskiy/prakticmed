@@ -147,6 +147,10 @@ input{
     align-items: center;
     justify-content: space-between;
     height: 80px;
+
+    @include for-992{
+      height: 45px;
+    }
   }
 
   &__logo{
@@ -172,9 +176,15 @@ input{
       transform: translateX(100%);
       flex-direction: column;
       align-items: center;
+      padding-top: 100px;
+      margin-top: 45px;
 
       &.open{
         transform: translateX(0);
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        background: white;
       }
     }
 
@@ -184,11 +194,26 @@ input{
     padding: 0 15px;
     position: relative;
 
-    &:hover{
-      .header__submenu{
-        display: block;
+    @include for-992{
+      margin-bottom: 15px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include from-992{
+      &:hover{
+        .header__submenu{
+          display: block;
+        }
       }
     }
+
+    @include for-992{
+      &.open .header__submenu{
+
+      }
+    }
+
   }
 
   &__menu-link{
@@ -196,6 +221,10 @@ input{
     font-size: 10px;
     position: relative;
     transition: 0.3s;
+
+    @include for-992{
+      font-size: 18px;
+    }
 
     &:before{
       content: "";
@@ -239,6 +268,11 @@ input{
     width: 200px;
     padding: 0 10px 0 20px;
 
+    @include for-992{
+      position: static;
+      width: 100%;
+    }
+
     *{
       line-height: 18px;
     }
@@ -252,17 +286,30 @@ input{
       border: 0;
     }
 
-    &:hover{
-      .header__submenu2{
-        display: block;
+    @include from-992{
+      &:hover{
+        .header__submenu2{
+          display: block;
+        }
       }
     }
+
+    @include for-992{
+      &.open .header__submenu2{
+
+      }
+    }
+
   }
 
   &__submenu-link-style{
     font-weight: 300;
     font-size: 11px;
     line-height: 18px;
+
+    @include for-992{
+      font-size: 14px;
+    }
 
   }
 
@@ -278,6 +325,13 @@ input{
     top: 0;
     width: 200px;
     padding: 0 12px 0 17px;
+
+    @include for-992{
+      position: static;
+      width: 100%;
+      margin-top: 10px;
+      padding: 0;
+    }
   }
 
   &__submenu2-item{
@@ -288,9 +342,11 @@ input{
       border: 0;
     }
 
-    &:hover{
-      .header__submenu3{
-        display: block;
+    @include from-992{
+      &:hover{
+        .header__submenu3{
+          display: block;
+        }
       }
     }
   }
@@ -307,6 +363,13 @@ input{
     top: 0;
     width: 200px;
     padding: 0 12px 0 17px;
+
+
+    @include for-992{
+      position: static;
+      width: 100%;
+      margin-top: 10px;
+    }
   }
 
   &__submenu3-item{
@@ -374,6 +437,27 @@ input{
     border-radius: 50%;
   }
 
+  @include for-992{
+
+    &:after{
+      content: '';
+      display: block;
+      width: 12px;
+      height: 8px;
+      background: url("../img/icon/Arrow-b.svg") center center no-repeat;
+      position: absolute;
+      right: 50%;
+      margin-right: -116px;
+      top: 20px;
+      transform: translateY(-50%);
+    }
+
+    &.open:after{
+      transform:rotate(-180deg);
+      top: 17px !important;
+    }
+  }
+
 }
 
 .has-submenu-first{
@@ -384,27 +468,35 @@ input{
       display: inline-block;
     }
 
-    &:before{
-      content: '';
-      display: block;
-      position: absolute;
-      height: calc(100% + 1px);
-      left: -20px;
-      width: 2px;
-      top: 0;
-      background: #FFC700;
-      opacity: 0;
-      transition: 0.3s;
-    }
-
-    &:hover{
+    @include from-992{
       &:before{
-        opacity: 1;
+        content: '';
+        display: block;
+        position: absolute;
+        height: calc(100% + 1px);
+        left: -20px;
+        width: 2px;
+        top: 0;
+        background: #FFC700;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      &:hover{
+        &:before{
+          opacity: 1;
+        }
       }
     }
 
+
     li:before{
       display: none;
+    }
+
+    @include for-992{
+      border: 0;
+      padding: 10px 0;
     }
   }
   li:first-child{
@@ -413,9 +505,61 @@ input{
     &:after{
       top: 20px;
     }
+
+    @include for-992{
+      border: 0;
+      padding: 10px 0;
+    }
+
   }
   li:last-child{
     padding-bottom: 12px;
+
+    @include for-992{
+      border: 0;
+      padding: 10px 0;
+    }
+
   }
+
+
+  @include for-992{
+    &:after{
+      content: '';
+      display: block;
+      width: 12px;
+      height: 8px;
+      background: url("../img/icon/Arrow-b.svg") center center no-repeat;
+      position: absolute;
+      right: 50%;
+      margin-right: -120px;
+      top: 10px;
+      transform: translateY(-50%);
+    }
+
+    &.open:after{
+      transform:rotate(-180deg);
+      top: 7px;
+    }
+  }
+
 }
 
+//.hexagon{
+//  width: 308px;
+//  height: 261px;
+//  background: #00000000;
+//  border-radius: 100%;
+//  margin-top: 20px;
+//  overflow: hidden;
+//
+//  &__img{
+//    width: 280px;
+//    height: 267px;
+//    margin-top: -3px;
+//    background: #ffffff00;
+//    display: block;
+//    clip-path: polygon(0 28%, 50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%);
+//    background: url("../img/hex-1.png") center center no-repeat;
+//  }
+//}
