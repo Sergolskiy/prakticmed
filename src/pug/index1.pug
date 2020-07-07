@@ -1,9 +1,9 @@
 extends _layout
 
 block vars
-  - var pageTitle = "Nav page";
+  - var pageTitle = "Home page";
   - var pageClass = "";
-  - var pageActive = "Navepage";
+  - var pageActive = "homepage";
 
 block content
   //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
@@ -14,7 +14,4 @@ block content
       img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
   div.main-wrap
-    div.prevpage(style="margin: 0 auto; height: 500px; display: flex; justify-content: center; color: black; flex-direction: column; align-items: center;")
-      div
-        a(href="./index1.html" target="_blank" style="font-size: 18px;") home
-
+    .site-container
