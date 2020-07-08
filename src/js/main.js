@@ -108,8 +108,27 @@ $(document).ready(function () {
     }
   });
 
+  var bLazy = new Blazy({
+    src: 'data-blazy'
+  });
 
+  // checking browser for WEBP
+  hasWebP().then(function () {
+    $('.webp-img').each(function () {
+      var webp = $(this).data('webp');
+      $(this).attr('data-blazy', webp);
+    });
 
+    bLazy.revalidate();
+
+  }, function () {
+    $('.webp-img').each(function () {
+      var img = $(this).data('img');
+      $(this).attr('data-blazy',  img );
+    });
+
+    bLazy.revalidate();
+  });
 
 });
 
