@@ -15,10 +15,10 @@ $blacklight: #656073;
   overflow: hidden;
   position: relative;
 
-  & > div {
-    position: relative;
-    z-index: 1;
-  }
+  //& > div {
+  //  position: relative;
+  //  z-index: 1;
+  //}
 }
 
 textarea,
@@ -80,14 +80,13 @@ a{
 }
 
 .tablet{
-  @media (max-width: 992px) {
-    display: none;
+  @media (min-width: 992px) {
+    display: none !important;
   }
 }
-
 .mobile{
-  @media (max-width: 768px) {
-    display: none;
+  @media (min-width: 768px) {
+    display: none !important;
   }
 }
 
@@ -121,6 +120,16 @@ input{
   min-height: 100vh;
 }
 
+.row{
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col{
+  padding: 0 15px;
+}
+
 .site-container{
   max-width: 1200px;
   margin: 0 auto;
@@ -131,7 +140,23 @@ input{
   }
 }
 
+.site-title2{
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+
+  color: #090909;
+
+  @include for-992{
+    text-align: center;
+    font-size: 30px;
+    line-height: 103%;
+  }
+}
+
 .site-btn{
+  display: inline-block;
   background: #FFC700;
   padding: 15px 33px;
   text-transform: uppercase;
@@ -212,7 +237,7 @@ input{
       max-width: 100%;
     }
 
-    @include for-550{
+    @include for-992{
       width: 92px;
     }
   }
@@ -230,13 +255,15 @@ input{
       align-items: center;
       padding-top: 100px;
       margin-top: 45px;
+      height: 100vh;
+      background: white;
+      opacity: 0;
 
       &.open{
         transform: translateX(0);
         width: 100%;
-        height: 100vh;
         overflow: auto;
-        background: white;
+        opacity: 1;
       }
     }
 
@@ -619,10 +646,19 @@ input{
 .top-block{
   padding-top: 116px;
   position: relative;
+  z-index: 2;
+
+  @include for-992{
+    padding-top: 70px;
+  }
 
   &__inner{
     position: relative;
     z-index: 1;
+
+    @include for-992{
+      padding-bottom: 60px;
+    }
   }
 
   &__top-line{
@@ -633,6 +669,10 @@ input{
 
     @media (max-width: 1250px) {
       max-width: 720px;
+    }
+
+    @include for-992{
+      margin-bottom: 55px;
     }
   }
 
@@ -648,12 +688,21 @@ input{
       line-height: 140%;
       display: block;
     }
+
+    @include for-992{
+      display: none;
+    }
   }
 
   &__address{
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.05em;
+
+    @include for-992{
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   &__title{
@@ -669,6 +718,13 @@ input{
       font-size: 38px;
       line-height: 62px;
       max-width: 620px;
+      text-transform: none;
+    }
+
+    @include for-992{
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 100%;
     }
   }
 
@@ -678,6 +734,12 @@ input{
     line-height: 22px;
     letter-spacing: 0.05em;
     margin-bottom: 40px;
+
+    @include for-992{
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0;
+    }
   }
 
   &__items{
@@ -687,6 +749,11 @@ input{
     @media (max-width: 1250px) {
       max-width: 50%;
       flex-wrap: wrap;
+    }
+
+    @include for-992{
+      flex-direction: column;
+      max-width: 100%;
     }
   }
 
@@ -711,7 +778,9 @@ input{
   }
 
   &__form{
-
+    @include for-992{
+      display: none;
+    }
   }
 
   &__form-bg{
@@ -811,6 +880,108 @@ input{
   }
 
 }
+
+
+.service{
+  padding-top: 90px;
+  padding-bottom: 35px;
+  background-size: cover;
+
+  @include for-768{
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__inner{
+
+  }
+
+  &__title{
+    text-align: center;
+    margin-bottom: 35px;
+
+    @include for-768{
+      font-size: 30px;
+    }
+  }
+
+  &__items{
+    @include for-1200{
+      justify-content: center;
+    }
+  }
+
+  &__item{
+    width: 25%;
+    margin-bottom: 30px;
+    min-width: 300px;
+
+    img{
+      display: inline !important;
+    }
+
+    @include for-992{
+      max-width: 300px;
+    }
+  }
+
+  &__item-inner{
+    background: white;
+    margin-top: 90px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-radius: 20px;
+
+    img{
+      margin-top: -90px;
+    }
+  }
+
+  &__name{
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  &__price{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #B1104E;
+  }
+
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+
+    li{
+      display: flex;
+      margin: 0 5px;
+      width: 100%;
+      max-width: 40px;
+
+      &.slick-active button{
+        background: #B1104E;
+      }
+    }
+
+    button{
+      font-size: 0;
+      border: 0;
+      width: 100%;
+      height: 5px;
+      background: #C4C4C4;
+      border-radius: 20px;
+    }
+  }
+
+}
+
 
 
 
@@ -1030,20 +1201,7 @@ input{
   }
 }
 
-.site-title2{
-  font-size: 40px;
-  line-height: 120%;
-  font-weight: 300;
-  letter-spacing: 0.05em;
 
-  color: #090909;
-
-  @include for-992{
-    text-align: center;
-    font-size: 30px;
-    line-height: 103%;
-  }
-}
 
 .motivated{
   background-color: #F7FBFF;
