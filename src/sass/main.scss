@@ -144,6 +144,32 @@ input{
       box-shadow: 0px 0px 9px #B2114E;
     }
   }
+
+  &--img-wrap{
+    padding-right: 15px;
+  }
+
+  &--img{
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    max-width: 470px;
+    width: 100%;
+    color: #FFFFFF;
+
+    img{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(40%);
+    }
+  }
 }
 
 
@@ -801,6 +827,12 @@ input{
   letter-spacing: 0.05em;
 
   color: #090909;
+
+  @include for-992{
+    text-align: center;
+    font-size: 30px;
+    line-height: 103%;
+  }
 }
 
 .motivated{
@@ -813,6 +845,8 @@ input{
     min-height: 555px;
     display: flex;
     align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   &__content{
@@ -826,6 +860,7 @@ input{
   }
 
   &__txt{
+    margin-bottom: 40px;
 
     p{
       font-weight: bold;
@@ -833,12 +868,26 @@ input{
       line-height: 144.5%;
       color: #090909;
 
+      @include for-992{
+        text-align: center;
+        font-size: 14px;
+        line-height: 144.5%;
+      }
+
     }
   }
 
   &__row{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @include for-992{
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px ;
+    }
   }
 
   &__phone{
@@ -849,11 +898,24 @@ input{
       line-height: 120%;
       letter-spacing: 0.05em;
       color: #B1104E;
+
+      @include for-992{
+        font-size: 25px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        color: #B1104E;
+      }
+    }
+
+
+    @include for-992{
+      margin-bottom: 40px;
     }
   }
 
   &__btn{
-
+    max-width: 470px;
+    width: 100%;
   }
 
   &__btn-i{
@@ -866,6 +928,10 @@ input{
     font-size: 12px;
     line-height: 120%;
     color: rgba(9, 9, 9, 0.6);
+
+    @include for-992{
+      text-align: center;
+    }
   }
 
 }
