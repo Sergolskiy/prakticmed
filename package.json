@@ -50,6 +50,7 @@
     "normalize.css": "^8.0.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.3",
-    "rellax": "^1.12.1"
+    "rellax": "^1.12.1",
+    "slick-carousel": "^1.8.1"
   }
 }

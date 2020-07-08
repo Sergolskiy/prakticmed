@@ -130,6 +130,34 @@ $(document).ready(function () {
     bLazy.revalidate();
   });
 
+
+  if($(document).width() < 992){
+    $('.service__items').slick({
+      infinite: true,
+      // centerMode: true,
+      variableWidth: true,
+      arrows: false,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
+
+
 });
 
 
