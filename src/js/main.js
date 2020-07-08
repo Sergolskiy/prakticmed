@@ -170,6 +170,30 @@ $(document).ready(function () {
         }
       ]
     });
+
+    $('.programs__slider').slick({
+      infinite: true,
+      // centerMode: true,
+      variableWidth: true,
+      arrows: false,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
   }
 
 
