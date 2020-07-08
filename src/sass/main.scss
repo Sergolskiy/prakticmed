@@ -1306,3 +1306,178 @@ input{
   }
 
 }
+
+.programs{
+
+  &__inner{
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  &__title{
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &__content{
+    display: flex;
+    margin: 0 -15px;
+  }
+
+  &__item{
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  &__item-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head{
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px 25px;
+    width: 100%;
+    transition: .3s;
+    position: relative;
+
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 168px;
+      z-index: -1;
+
+      background-image: url("../img/programs-head-bg.svg");
+      background-position: center bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item-content:hover  &__head{
+
+    &:before {
+      background-image: url("../img/programs-head-bg-hover.svg");
+    }
+  }
+
+  &__head-price{
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #B2114E;
+    justify-content: flex-end;
+
+    span{
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 25px;
+      margin-bottom: 15px;
+    }
+
+    svg {
+      margin-left: 5px;
+
+      path {
+
+      }
+    }
+  }
+
+  &__item-content:hover &__head-price{
+    color: white;
+
+    span{
+      color: white;
+    }
+    svg {
+      fill: white;
+    }
+  }
+
+  &__body{
+    background-color: white;
+    position: relative;
+    padding: 16px 20px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #B2114E;
+    }
+  }
+
+  &__txt{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    color: #090909;
+    margin-bottom: 20px;
+  }
+
+  &__list{
+
+    ul{
+
+      li{
+        padding-left: 25px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: #090909;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:before{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    &--check{
+      li{
+        &:before{
+          background: url("../img/icon/chek-ico.svg") center no-repeat;
+          width: 14px;
+          height: 15px;       }
+      }
+    }
+
+    &--cross{
+      li{
+        &:before{
+          background: url("../img/icon/cross-ico.svg") center no-repeat;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  &__bottom{
+    background-color: white;
+    padding: 0 23px 20px;
+  }
+
+  &__btn{
+
+  }
+
+}
