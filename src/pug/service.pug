@@ -14,7 +14,56 @@ block content
       img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
   div.main-wrap
-    .motivated.b-lazy(data-blazy="./img/motivated-bg.webp")
+
+
+    //.one-procedure.b-lazy.webp-img(data-webp="./img/one-procedure.webp"
+      data-webp-mobile="./img/one-procedure-mobile.webp"
+      data-img="./img/one-procedure.jpg"
+      data-img-mobile="./img/one-procedure-mobile.jpg")
+    .one-procedure
+      .one-procedure__inner
+        .one-procedure__txt В <strong>82%</strong> случаев достаточно одной процедуры
+        .one-procedure__list
+          .one-procedure__item
+            .one-procedure__item-content.b-lazy.webp-img(data-webp="./img/one-procedure01.webp"
+            data-webp-mobile="./img/one-procedure01.webp"
+            data-img="./img/one-procedure01.png"
+            data-img-mobile="./img/one-procedure01.png")
+              .one-procedure__ico.one-procedure__ico--1
+              .one-procedure__item-txt Позвоните нам <br> по бесплатному <br> телефону
+          .one-procedure__item
+            .one-procedure__item-content.b-lazy.webp-img(data-webp="./img/one-procedure02.webp"
+            data-webp-mobile="./img/one-procedure02.webp"
+            data-img="./img/one-procedure02.png"
+            data-img-mobile="./img/one-procedure02.png")
+              .one-procedure__ico.one-procedure__ico--2
+              .one-procedure__item-txt Врач выезжает <br> немедленно
+          .one-procedure__item
+            .one-procedure__item-content.b-lazy.webp-img(data-webp="./img/one-procedure03.webp"
+            data-webp-mobile="./img/one-procedure03.webp"
+            data-img="./img/one-procedure03.png"
+            data-img-mobile="./img/one-procedure03.png")
+              .one-procedure__ico.one-procedure__ico--3
+              .one-procedure__item-txt Капельница <br> снимает боль <br> и симптомы
+          .one-procedure__item
+            .one-procedure__item-content.b-lazy.webp-img(data-webp="./img/one-procedure04.webp"
+            data-webp-mobile="./img/one-procedure04.webp"
+            data-img="./img/one-procedure04.png"
+            data-img-mobile="./img/one-procedure04.png")
+              .one-procedure__ico.one-procedure__ico--4
+              .one-procedure__item-txt Сон <br> восстановит <br> организм
+          .one-procedure__item
+            .one-procedure__item-content.b-lazy.webp-img(data-webp="./img/one-procedure05.webp"
+            data-webp-mobile="./img/one-procedure05.webp"
+            data-img="./img/one-procedure05.png"
+            data-img-mobile="./img/one-procedure05.png")
+              .one-procedure__ico.one-procedure__ico--5
+              .one-procedure__item-txt Вернётся <br> способность <br> работать и водить
+
+    .motivated.b-lazy.webp-img(data-webp="./img/motivated-bg.webp"
+      data-webp-mobile="./img/motivated-bg-mobile.webp"
+      data-img="./img/motivated-bg.png"
+      data-img-mobile="./img/motivated-bg-mobile.png")
       .motivated__inner.site-container
         .motivated__content
           .motivated__title.site-title2 Мотивация зависимых
@@ -25,8 +74,25 @@ block content
           .motivated__row
             .motivated__phone
               a(href="tel:88003012803") тел. 8 (800) 301-28-03
-            .motivated__btn
+            .motivated__btn.site-btn--img-wrap
               a(href="#").motivated__btn-i.site-btn.site-btn--red.site-btn--img Отправить
+                picture
+                  source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
+                  source(srcset="./img/icon/blokno-ico.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" width="100" height="93")
+
 
           .motivated__caption.
             Позвоните по телефону горячей линии и получите бесплатную консультацию нарколога. Мы работаем круглосуточно 24/7
+
+
+    .programs
+      .programs__inner.site-container
+        .programs__title.site-title2 НАШИ ПРОГРАММЫ ДЕТОКСИКАЦИИ
+        .programs__content
+          .programs__item
+            .programs__item-content
+              .programs__item
+
+
+

@@ -162,6 +162,32 @@ input{
       box-shadow: 0px 0px 9px #B2114E;
     }
   }
+
+  &--img-wrap{
+    padding-right: 15px;
+  }
+
+  &--img{
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    max-width: 470px;
+    width: 100%;
+    color: #FFFFFF;
+
+    img{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(40%);
+    }
+  }
 }
 
 
@@ -1167,6 +1193,12 @@ input{
   letter-spacing: 0.05em;
 
   color: #090909;
+
+  @include for-992{
+    text-align: center;
+    font-size: 30px;
+    line-height: 103%;
+  }
 }
 
 .motivated{
@@ -1179,6 +1211,8 @@ input{
     min-height: 555px;
     display: flex;
     align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   &__content{
@@ -1192,6 +1226,7 @@ input{
   }
 
   &__txt{
+    margin-bottom: 40px;
 
     p{
       font-weight: bold;
@@ -1199,12 +1234,26 @@ input{
       line-height: 144.5%;
       color: #090909;
 
+      @include for-992{
+        text-align: center;
+        font-size: 14px;
+        line-height: 144.5%;
+      }
+
     }
   }
 
   &__row{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @include for-992{
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px ;
+    }
   }
 
   &__phone{
@@ -1215,11 +1264,24 @@ input{
       line-height: 120%;
       letter-spacing: 0.05em;
       color: #B1104E;
+
+      @include for-992{
+        font-size: 25px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        color: #B1104E;
+      }
+    }
+
+
+    @include for-992{
+      margin-bottom: 40px;
     }
   }
 
   &__btn{
-
+    max-width: 470px;
+    width: 100%;
   }
 
   &__btn-i{
@@ -1232,6 +1294,171 @@ input{
     font-size: 12px;
     line-height: 120%;
     color: rgba(9, 9, 9, 0.6);
+
+    @include for-992{
+      text-align: center;
+    }
+  }
+
+}
+
+
+.one-procedure{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/one-procedure.svg");
+
+  @include for-768{
+    background-image: url("../img/one-procedure-mobile.svg");
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 15px 130px;
+    align-items: center;
+
+    @include for-1400{
+      padding: 70px 15px 40px;
+    }
+  }
+
+  &__txt{
+    text-align: center;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #090909;
+    margin-bottom: 40px;
+
+    @include for-1400{
+      margin-bottom: 20px;
+    }
+
+    @include for-992{
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__list{
+    display: flex;
+    justify-content: center;
+    margin: 0 -15px;
+    max-width: 1325px;
+    width: 100%;
+
+    @include for-1400{
+      transform: scale(.7);
+    }
+
+    @include for-992{
+      transform: scale(1);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item{
+    padding: 0 10px;
+    margin-bottom: 20px;
+
+    @include for-992{
+      width: 33.3333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include for-768{
+      width: 100%;
+    }
+  }
+
+  &__item-content{
+    width: 245px;
+    height: 255px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include for-992{
+
+    }
+  }
+
+  &__ico{
+    display: flex;
+    transition: .3s;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 15px;
+  }
+
+  &__ico--1{
+    background-image: url("../img/icon/one-procedure-ico01.svg");
+    width: 39px;
+    height: 40px;
+  }
+
+  &__item-content:hover &__ico--1{
+    background-image: url("../img/icon/one-procedure-ico01-hover.svg");
+  }
+
+  &__ico--2{
+    background-image: url("../img/icon/one-procedure-ico02.svg");
+    width: 50px;
+    height: 40px;
+  }
+
+  &__item-content:hover &__ico--2{
+    background-image: url("../img/icon/one-procedure-ico02-hover.svg");
+  }
+
+  &__ico--3{
+    background-image: url("../img/icon/one-procedure-ico03.svg");
+    width: 31px;
+    height: 43px;
+  }
+
+  &__item-content:hover &__ico--3{
+    background-image: url("../img/icon/one-procedure-ico03-hover.svg");
+  }
+
+  &__ico--4{
+    background-image: url("../img/icon/one-procedure-ico04.svg");
+    width: 47px;
+    height: 45px;
+  }
+
+  &__item-content:hover &__ico--4{
+    background-image: url("../img/icon/one-procedure-ico04-hover.svg");
+  }
+
+  &__ico--5{
+    background-image: url("../img/icon/one-procedure-ico05.svg");
+    width: 53px;
+    height: 45px;
+  }
+
+  &__item-content:hover &__ico--5{
+    background-image: url("../img/icon/one-procedure-ico05-hover.svg");
+  }
+
+  &__item-txt{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #090909;
+
   }
 
 }

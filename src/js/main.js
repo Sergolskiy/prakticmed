@@ -114,18 +114,33 @@ $(document).ready(function () {
 
   // checking browser for WEBP
   hasWebP().then(function () {
-    $('.webp-img').each(function () {
-      var webp = $(this).data('webp');
-      $(this).attr('data-blazy', webp);
-    });
+
+    if($(window).width() > 768) {
+      $('.webp-img').each(function () {
+        var webp = $(this).data('webp');
+        $(this).attr('data-blazy', webp);
+      });
+    } else {
+      $('.webp-img').each(function () {
+        var webp = $(this).data('webp-mobile');
+        $(this).attr('data-blazy', webp);
+      });
+    }
 
     bLazy.revalidate();
 
   }, function () {
-    $('.webp-img').each(function () {
-      var img = $(this).data('img');
-      $(this).attr('data-blazy',  img );
-    });
+    if($(window).width() > 768) {
+      $('.webp-img').each(function () {
+        var img = $(this).data('img');
+        $(this).attr('data-blazy', img);
+      });
+    } else {
+      $('.webp-img').each(function () {
+        var img = $(this).data('img-mobile');
+        $(this).attr('data-blazy', img);
+      });
+    }
 
     bLazy.revalidate();
   });
