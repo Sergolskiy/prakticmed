@@ -125,6 +125,10 @@ input{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &__inner{
+    max-width: 992px;
+  }
 }
 
 .site-btn{
@@ -998,6 +1002,80 @@ input{
       line-height: 16px;
     }
   }
+}
 
+.site-title2{
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+
+  color: #090909;
+}
+
+.motivated{
+  background-color: #F7FBFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__inner{
+    min-height: 555px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content{
+    max-width: 890px;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__title{
+
+  }
+
+  &__txt{
+
+    p{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 144.5%;
+      color: #090909;
+
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__phone{
+
+    a {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 120%;
+      letter-spacing: 0.05em;
+      color: #B1104E;
+    }
+  }
+
+  &__btn{
+
+  }
+
+  &__btn-i{
+
+  }
+
+  &__caption{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+    color: rgba(9, 9, 9, 0.6);
+  }
 
 }
