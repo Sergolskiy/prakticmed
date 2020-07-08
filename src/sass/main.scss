@@ -1145,3 +1145,164 @@ input{
   }
 
 }
+
+
+.one-procedure{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/one-procedure.svg");
+
+  @include for-768{
+    background-image: url("../img/one-procedure-mobile.svg");
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 15px 130px;
+    align-items: center;
+
+    @include for-1400{
+      padding: 70px 15px 40px;
+    }
+  }
+
+  &__txt{
+    text-align: center;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #090909;
+    margin-bottom: 40px;
+
+    @include for-1400{
+      margin-bottom: 20px;
+    }
+
+    @include for-992{
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__list{
+    display: flex;
+    justify-content: center;
+    margin: 0 -15px;
+    max-width: 1325px;
+    width: 100%;
+
+    @include for-1400{
+      transform: scale(.7);
+    }
+
+    @include for-992{
+      transform: scale(1);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item{
+    padding: 0 10px;
+    margin-bottom: 20px;
+
+    @include for-992{
+      width: 33.3333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include for-768{
+      width: 100%;
+    }
+  }
+
+  &__item-content{
+    width: 245px;
+    height: 255px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include for-992{
+
+    }
+  }
+
+  &__ico{
+    display: flex;
+    transition: .3s;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 15px;
+  }
+
+  &__ico--1{
+    background-image: url("../img/icon/one-procedure-ico01.svg");
+    width: 39px;
+    height: 40px;
+  }
+
+  &__item-content:hover &__ico--1{
+    background-image: url("../img/icon/one-procedure-ico01-hover.svg");
+  }
+
+  &__ico--2{
+    background-image: url("../img/icon/one-procedure-ico02.svg");
+    width: 50px;
+    height: 40px;
+  }
+
+  &__item-content:hover &__ico--2{
+    background-image: url("../img/icon/one-procedure-ico02-hover.svg");
+  }
+
+  &__ico--3{
+    background-image: url("../img/icon/one-procedure-ico03.svg");
+    width: 31px;
+    height: 43px;
+  }
+
+  &__item-content:hover &__ico--3{
+    background-image: url("../img/icon/one-procedure-ico03-hover.svg");
+  }
+
+  &__ico--4{
+    background-image: url("../img/icon/one-procedure-ico04.svg");
+    width: 47px;
+    height: 45px;
+  }
+
+  &__item-content:hover &__ico--4{
+    background-image: url("../img/icon/one-procedure-ico04-hover.svg");
+  }
+
+  &__ico--5{
+    background-image: url("../img/icon/one-procedure-ico05.svg");
+    width: 53px;
+    height: 45px;
+  }
+
+  &__item-content:hover &__ico--5{
+    background-image: url("../img/icon/one-procedure-ico05-hover.svg");
+  }
+
+  &__item-txt{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #090909;
+
+  }
+
+}
