@@ -1,7 +1,11 @@
 header.header
   .header__inner.site-container
     .header__logo
-      img(src="./img/logopraktik.png")
+      a(href="#")
+        picture
+          source(srcset="./img/logopraktik.webp" type="image/webp")
+          source(srcset="./img/logopraktik.png" type="image/png")
+          img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
     ul.header__menu
       li.header__menu-item.has-submenu-first
