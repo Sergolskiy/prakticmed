@@ -670,6 +670,22 @@ input{
     @include for-992{
       padding-bottom: 60px;
     }
+
+    &--service-page{
+      @include for-992{
+        display: flex;
+        flex-direction: column;
+
+        .top-block__top-line{
+          order: -2;
+          margin-bottom: 35px;
+        }
+
+        .breadcrumb{
+          order: -1;
+        }
+      }
+    }
   }
 
   &__top-line{
@@ -725,6 +741,10 @@ input{
     text-transform: uppercase;
     margin-bottom: 13px;
 
+    &--service{
+      max-width: 940px;
+    }
+
     @media (max-width: 1250px) {
       font-size: 38px;
       line-height: 62px;
@@ -736,6 +756,7 @@ input{
       font-weight: 300;
       font-size: 36px;
       line-height: 100%;
+      letter-spacing: -0.02em;
     }
   }
 
@@ -745,6 +766,37 @@ input{
     line-height: 22px;
     letter-spacing: 0.05em;
     margin-bottom: 40px;
+
+    &--service{
+      font-size: 30px;
+      line-height: 36px;
+      text-transform: uppercase;
+
+      color: #FFC700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .site-btn{
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 10px 43px;
+        letter-spacing: 0;
+        font-weight: 300;
+
+        @include for-992{
+          padding: 19px 15px;
+          display: none;
+        }
+      }
+
+      @include for-992{
+        font-size: 17px !important;
+        line-height: 120% !important;
+        max-width: 180px;
+        margin-bottom: 10px !important;
+      }
+    }
 
     @include for-992{
       font-size: 14px;
@@ -788,6 +840,14 @@ input{
     }
   }
 
+  &__btn{
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 19px 15px;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+
   &__form{
     @include for-992{
       display: none;
@@ -801,6 +861,28 @@ input{
     width: 673px;
     height: 852px;
     margin-right: -952px;
+
+    &--service{
+      bottom: 0;
+      top: auto;
+      right: 50%;
+      width: 755px;
+      height: 354px;
+
+      @media (max-width: 1250px) {
+        display: none;
+      }
+    }
+
+    &--service-left{
+      width: 380px;
+      height: 910px;
+      margin-right: 570px;
+
+      @media (max-width: 1250px) {
+        display: none;
+      }
+    }
 
     @media (max-width: 1250px) {
       margin-right: -767px;
@@ -887,6 +969,26 @@ input{
   }
 
   &__btn{
+
+  }
+
+}
+
+.breadcrumb{
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 0.2em;
+  padding-bottom: 20px;
+
+  a{
+    text-decoration: underline;
+  }
+
+  span{
+    font-weight: bold;
+  }
+
+  @include for-992{
 
   }
 
@@ -1065,7 +1167,11 @@ input{
     width: 337px;
     height: 632px;
     margin-left: -957px;
-    display: none;
+
+    @include for-992{
+
+      display: none;
+    }
   }
 
   &__txt{
@@ -1350,6 +1456,301 @@ input{
 
 }
 
+.text-block{
+  padding: 136px 0 110px;
+  background: #F7FBFF;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+
+  @include for-992{
+    background: #ebebeb !important;
+    padding: 55px 0 75px;
+  }
+
+  &__inner{
+    padding: 0 125px;
+
+    @include for-992{
+      padding: 0 15px;
+    }
+  }
+
+  &__content{
+    max-width: 860px;
+  }
+
+  &__title{
+    margin-bottom: 45px;
+
+    @include for-992{
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__caption{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: justify;
+
+    @include for-992{
+      font-size: 14px;
+      line-height: 144.5%;
+    }
+  }
+
+  &__desc-line{
+    font-size: 20px;
+    line-height: 33px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 60px;
+
+    @include for-992{
+      font-size: 14px;
+      line-height: 20px;
+      padding-left: 17px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 7px;
+      height: 100%;
+      background: #FFC700;
+
+      @include for-992{
+        width: 4px;
+      }
+    }
+
+    p{
+      margin-bottom: 30px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      @include for-992{
+        margin-bottom: 15px;
+      }
+    }
+
+    a{
+      color: #B1104E;
+      text-decoration: underline;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    span{
+      color: #B1104E;
+    }
+  }
+
+  &__desc{
+    font-size: 20px;
+    line-height: 33px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+
+    @include for-992{
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+}
+
+.reviews{
+  padding: 100px 0;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  @include for-992{
+    background-position: right top;
+    padding: 32px 0 120px;
+  }
+
+  @include for-768{
+    background: #f7fbff;
+    background-position: right top;
+  }
+
+  &__inner{
+
+  }
+
+  &__content{
+    max-width: 737px;
+    margin-left: auto;
+
+    @include for-992{
+      margin-right: auto;
+    }
+  }
+
+  &__title{
+    margin-bottom: 107px;
+    text-align: left;
+
+    @include for-992{
+      margin-bottom: 134px;
+    }
+  }
+
+  &__txt{
+    margin-bottom: 38px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    position: relative;
+
+    @include for-992{
+      font-size: 14px;
+      line-height: 144.5%;
+      max-width: 90%;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: -55px;
+      left: -80px;
+      display: block;
+      width: 110px;
+      height: 95px;
+      background: url("../img/quotes.svg") center center no-repeat;
+      background-size: contain;
+
+      @include for-992{
+        top: -100px;
+        left: 0;
+        width: 80px;
+      }
+    }
+  }
+
+  &__bottom{
+
+  }
+
+  &__name{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__about{
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+}
+
+
+.text-block2{
+  padding: 60px 0 90px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include for-992{
+    background: #f7fbff !important;
+    padding: 60px 0 50px;
+  }
+
+  &__inner{
+    max-width: 990px;
+    text-align: justify;
+  }
+
+  &__content{
+  }
+
+  &__title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    color: #B1104E;
+    margin-bottom: 23px;
+
+    @include for-992{
+      font-size: 18px;
+      line-height: 18px;
+      max-width: 77%;
+      text-align: left;
+    }
+  }
+
+  &__txt{
+
+    font-size: 20px;
+    line-height: 33px;
+
+    @include for-992{
+      font-size: 14px;
+      line-height: 23px;
+    }
+
+    span{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 35px;
+      margin-top: 40px;
+      margin-bottom: 23px;
+      display: block;
+
+      @include for-992{
+        font-size: 18px;
+        line-height: 18px;
+        color: #B1104E;
+        margin-top: 30px;
+        max-width: 83%;
+        text-align: left;
+      }
+    }
+
+    p{
+      margin-top: 0;
+      margin-bottom: 24px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    hr{
+      margin: 0;
+    }
+
+    ul{
+      margin-bottom: 40px;
+
+      @include for-992{
+        margin-bottom: 30px;
+      }
+    }
+
+    br{
+      @include for-992{
+        display: none;
+      }
+    }
+  }
+
+}
 
 
 
