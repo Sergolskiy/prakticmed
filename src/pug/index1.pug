@@ -46,7 +46,10 @@ block content
           .site-widget__top
             .site-widget__top-main
               .site-widget__img
-                img(src="./img/man.png" alt="img")
+                picture
+                  source(srcset="./img/man.webp" type="image/webp")
+                  source(srcset="./img/man.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               .site-widget__name Владимир
                 span Консультант
             .site-widget__desc Добрый день! Готов ответить на Ваши вопросы.
