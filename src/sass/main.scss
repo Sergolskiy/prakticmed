@@ -243,6 +243,8 @@ input{
 
   &__logo{
     width: 185px;
+    position: relative;
+    z-index: 1;
 
     img{
       max-width: 100%;
@@ -265,7 +267,7 @@ input{
       flex-direction: column;
       align-items: center;
       padding-top: 100px;
-      margin-top: 45px;
+      margin-top: 0;
       height: 100vh;
       background: white;
       opacity: 0;
@@ -485,6 +487,8 @@ input{
       display: none;
     }
 
+    position: relative;
+    z-index: 1;
     font-weight: bold;
     font-size: 15px;
     line-height: 20px;
@@ -497,6 +501,8 @@ input{
       display: none;
     }
 
+    position: relative;
+    z-index: 1;
     width: 24px;
     height: 24px;
     background: url("../img/icon/Burger.svg") center center no-repeat;
@@ -3172,9 +3178,13 @@ input{
     }
 
     @include for-992{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       img{
         width: 100%;
+        max-width: 460px;
       }
     }
   }
@@ -3642,4 +3652,147 @@ input{
   }
 
 
+}
+
+.popup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  transition: .3s all;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+
+  &.open{
+    z-index: 350;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
+
+  &__inner{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__close{
+    position: absolute;
+    right: -24px;
+    top: -24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    transition: .3s all;
+    z-index: 3;
+
+    @include for-992{
+      width: 25px;
+      height: 25px;
+      right: 5px;
+      top: 5px;
+    }
+
+    &:hover{
+      opacity: .7;
+    }
+
+  }
+
+  &__close-ico{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url("../img/icon/close-popup.svg") center no-repeat;
+    background-size: contain;
+
+    @include for-992{
+      background: url("../img/icon/close-popup-mobile.svg") center no-repeat;
+    }
+  }
+
+}
+
+.callback{
+
+
+  &__content{
+    background: white;
+    display: flex;
+  }
+
+  &__logo{
+    position: relative;
+    top: 55px;
+  }
+
+  input{
+    border: 0.5px solid #B4B4B4;
+  }
+
+  .popup__close{
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  &__img{
+    background-color: #EBEBEB;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-width: 670px;
+    height: 616px;
+    margin-left: -15px;
+
+    @include for-1200{
+      background-image: url(./img/popup-img.webp);
+      min-width: 570px;
+    }
+
+    @include for-992{
+      display: none;
+    }
+  }
+
+  &__form{
+    padding-top: 90px;
+    padding-bottom: 85px;
+    max-width: 620px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 130px;
+    padding-right: 130px;
+
+    @include for-1200{
+
+      padding: 90px 50px 85px;
+    }
+  }
+
+  .top-block__form-inner{
+    position: static;
+    top: 0;
+    right: auto;
+    margin-right: 0;
+  }
 }

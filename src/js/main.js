@@ -60,11 +60,11 @@ $(document).ready(function () {
 
   $(document).scroll(function () {
     var top = $(document).scrollTop();
-
-    if (top < 380) {
+    if (top < 1) {
       $(".header").removeClass('scroll');
+      console.log(234);
     } else {
-      $(".to-top").addClass('scroll');
+      $(".header").addClass('scroll');
     }
   });
 
@@ -348,6 +348,30 @@ $(document).ready(function () {
       },300);
     });
   }
+
+
+  /*popups start*/
+  $(document).on('click', 'a[data-modal-class]', function (e) {
+    e.preventDefault();
+    var dataModalId = $(this).attr('data-modal-class');
+    $('.popup.' + dataModalId + '').addClass('open');
+    setTimeout(function () {
+
+      bLazy.revalidate();
+    },500)
+  });
+
+  $(document).on('click', '.popup__close', function (e) {
+    $('.popup ').removeClass('open');
+  });
+
+  $(document).on('click', '.popup', function (e) {
+
+    if(e.target.classList[0] == "popup") {
+      $('.popup ').removeClass('open');
+    }
+  });
+  /*popups end*/
 
 });
 
