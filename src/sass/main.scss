@@ -306,6 +306,11 @@ input{
       }
     }
 
+    &.tablet{
+      position: relative;
+      top: 50px;
+    }
+
   }
 
   &__menu-link{
@@ -663,7 +668,7 @@ input{
 .top-block{
   padding-top: 116px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   @include for-992{
     padding-top: 70px;
@@ -689,6 +694,10 @@ input{
 
         .breadcrumb{
           order: -1;
+        }
+
+        .site-btn{
+          max-width: 290px;
         }
       }
     }
@@ -948,6 +957,11 @@ input{
   position: fixed;
   bottom: 20px;
   right: 100px;
+  z-index: 100;
+
+  @include for-550{
+    right: 10px;
+  }
 
   &__inner{
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
