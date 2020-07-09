@@ -150,6 +150,12 @@ $(document).ready(function () {
     bLazy.revalidate();
   });
 
+  $('.site-widget__btn').click(function (e) {
+    e.preventDefault();
+    $('.site-widget__inner').toggleClass('open');
+    $(this).toggleClass('active');
+  });
+
 
   if($(document).width() < 992){
     $('.service__items').slick({
