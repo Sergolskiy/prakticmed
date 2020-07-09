@@ -1574,8 +1574,10 @@ input{
   &__sub{
     .top-block__items{
       align-items: center;
-      padding-bottom: 0px;
-      margin-top: -8px;
+      //padding-bottom: 0px;
+      //margin-top: -8px;
+      padding-bottom: 20px;
+      margin-top: 0px;
 
       @include for-1100{
         max-width: 100%;
@@ -1719,6 +1721,121 @@ input{
   }
 
   &__content{
+
+
+
+    &--service{
+      padding-top: 30px;
+
+      @include for-992{
+        padding-top: 0;
+      }
+
+      .text-block2__txt{
+        font-size: 18px;
+        line-height: 165%;
+
+        @include for-992{
+          font-size: 14px;
+          line-height: 165%;
+        }
+
+        span{
+          font-size: 20px;
+          line-height: 165%;
+          margin-bottom: 40px;
+
+          @include for-992{
+            font-size: 14px;
+            line-height: 23px;
+            color: #090909;
+            margin-bottom: 25px;
+            margin-top: 25px;
+          }
+        }
+
+        p{
+          margin-bottom: 40px;
+
+          @include for-992{
+            margin-bottom: 25px;
+          }
+        }
+
+        h3{
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 144.5%;
+          margin-bottom: 40px;
+          margin-top: 40px;
+
+          @include for-992{
+            color: #B1104E;
+            font-size: 18px;
+            line-height: 18px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+          }
+        }
+      }
+
+      ul{
+        margin-bottom: 50px;
+        li{
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 9px;
+
+          @include for-992{
+            padding-left: 20px;
+          }
+
+          &:before{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            display: inline-block;
+            width: 16px;
+            height: 15px;
+            background: url("../img/svg/v.svg") center center no-repeat;
+
+            @include for-992{
+              top: 5px;
+              width: 13px;
+              background-size: contain;
+              height: 13px;
+            }
+          }
+        }
+      }
+
+      ol{
+        padding: 0;
+        margin-bottom: 40px;
+        list-style: none;
+
+        li{
+          padding-left: 30px;
+          counter-increment: step-counter;
+          position: relative;
+          margin-bottom: 4px;
+
+          &:before{
+            content: counter(step-counter);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 16px;
+            height: 15px;
+            margin-right: 15px;
+            color: #B1104E;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 
   &__title{
@@ -2021,7 +2138,7 @@ input{
   background-position: center center;
 
   &__inner{
-    min-height: 555px;
+    min-height: 577px;
     display: flex;
     align-items: center;
     padding-top: 70px;
@@ -3380,6 +3497,95 @@ input{
       height: 5px;
       background: #C4C4C4;
       border-radius: 20px;
+    }
+  }
+
+
+}
+
+.price-block{
+  background-color: #EBEBEB;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__inner{
+    min-height: 565px;
+    display: flex;
+    align-items: center;
+
+
+    @include for-1400{
+      min-height: 534px;
+      justify-content: center;
+    }
+  }
+
+  &__content{
+
+
+    @include for-550{
+      width: 100%;
+    }
+  }
+
+  &__title{
+    margin-bottom: 15px;
+
+    @include for-992{
+      text-align: start;
+    }
+  }
+
+  &__table{
+
+    table{
+      border-collapse: collapse;
+
+      @include for-550{
+        width: calc(100% + 30px);
+        margin:  0 -15px;
+      }
+    }
+    tr{
+
+      &:nth-child(even){
+        background: white;
+      }
+    }
+
+    th{
+      text-align: start;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 144.5%;
+      color: #090909;
+      padding: 15px 23px 25px;
+
+      @include for-550{
+        padding: 15px 15px 20px;
+      }
+    }
+
+    td{
+      font-size: 18px;
+      color: #090909;
+      padding: 15px 23px;
+
+      @include for-768{
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @include for-550{
+        padding: 15px 15px
+      }
+
+      &:nth-child(2){
+        color: #B1104E;
+        font-weight: 700;
+        white-space: nowrap;
+      }
     }
   }
 
