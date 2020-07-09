@@ -343,6 +343,26 @@ $(document).ready(function () {
     });
   }
 
+
+  /*popups start*/
+  $(document).on('click', 'a[data-modal-class]', function (e) {
+    e.preventDefault();
+    var dataModalId = $(this).attr('data-modal-class');
+    $('.popup.' + dataModalId + '').addClass('open');
+  });
+
+  $(document).on('click', '.popup__close', function (e) {
+    $('.popup ').removeClass('open');
+  });
+
+  $(document).on('click', '.popup', function (e) {
+
+    if(e.target.classList[0] == "popup") {
+      $('.popup ').removeClass('open');
+    }
+  });
+  /*popups end*/
+
 });
 
 
