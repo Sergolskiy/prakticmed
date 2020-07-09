@@ -1979,7 +1979,7 @@ input{
   background-position: center center;
 
   &__inner{
-    min-height: 555px;
+    min-height: 577px;
     display: flex;
     align-items: center;
     padding-top: 70px;
@@ -3338,6 +3338,95 @@ input{
       height: 5px;
       background: #C4C4C4;
       border-radius: 20px;
+    }
+  }
+
+
+}
+
+.price-block{
+  background-color: #EBEBEB;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__inner{
+    min-height: 565px;
+    display: flex;
+    align-items: center;
+
+
+    @include for-1400{
+      min-height: 534px;
+      justify-content: center;
+    }
+  }
+
+  &__content{
+
+
+    @include for-550{
+      width: 100%;
+    }
+  }
+
+  &__title{
+    margin-bottom: 15px;
+
+    @include for-992{
+      text-align: start;
+    }
+  }
+
+  &__table{
+
+    table{
+      border-collapse: collapse;
+
+      @include for-550{
+        width: calc(100% + 30px);
+        margin:  0 -15px;
+      }
+    }
+    tr{
+
+      &:nth-child(even){
+        background: white;
+      }
+    }
+
+    th{
+      text-align: start;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 144.5%;
+      color: #090909;
+      padding: 15px 23px 25px;
+
+      @include for-550{
+        padding: 15px 15px 20px;
+      }
+    }
+
+    td{
+      font-size: 18px;
+      color: #090909;
+      padding: 15px 23px;
+
+      @include for-768{
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @include for-550{
+        padding: 15px 15px
+      }
+
+      &:nth-child(2){
+        color: #B1104E;
+        font-weight: 700;
+        white-space: nowrap;
+      }
     }
   }
 
