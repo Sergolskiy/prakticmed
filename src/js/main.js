@@ -263,8 +263,9 @@ $(document).ready(function () {
     $(this).removeClass('active');
   }, function () {
     $(this).addClass('active');
-  })
+  });
 
+  $('.phone').inputmask("+7 (999) 999-99-99");
   if($(document).find('#licen-slider').length > 0) {
     $('#licen-slider').magnificPopup({
       delegate: 'a:not(.slick-cloned)',
