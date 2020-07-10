@@ -66,9 +66,10 @@ footer.footer
           .top-block__form-inner
             .top-block__form-title Оставить заявку <b>НА БЕСПЛАТНУЮ</b> консультацию нарколога
             form.top-block__form-i
-              input(type="text" placeholder="Ваше имя")
-              input(type="text" placeholder="+7 (___) ___-__-__").phone
+              input(type="text" placeholder="Ваше имя" required)
+              input(type="text" inputmode="numeric" placeholder="+7 (___) ___-__-__").phone
               .site-btn--img-wrap
+                button(style='display: none;')
                 a(href="#").top-block__form-btn.site-btn--red.site-btn--img отправить
                   picture
                     source(srcset="./img/icon/blokno-ico.webp" type="image/webp")

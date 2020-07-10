@@ -21,7 +21,7 @@ block content
       data-img="./img/one-procedure.jpg"
       data-img-mobile="./img/one-procedure-mobile.jpg")
 
-    .top-block.b-lazy.webp-img(data-webp="./img/service-top-bg.webp" data-img="./img/service-top-bg.png")
+    .top-block.b-lazy.webp-img(data-webp="./img/service-top-bg.webp" data-img="./img/service-top-bg.png" data-webp-mobile='./img/service-top-bg-mob.webp' data-img-mobile="./img/service-top-bg.png")
       .top-block__inner.top-block__inner--service-page.site-container
         .top-block__top-line
           .top-block__phone
@@ -205,9 +205,10 @@ block content
           .help-block__desc Специалист проведет процедуру анонимно
           .help-block__form
             form.top-block__form-i.help-block__form-i
-              input(type="text" placeholder="Ваше имя")
-              input(type="text" placeholder="+7 (___) ___-__-__").phone
+              input(type="text" placeholder="Ваше имя" required)
+              input(type="text" inputmode="numeric" placeholder="+7 (___) ___-__-__").phone
               .form__btn-wrap.site-btn--img-wrap
+                button(style='display: none;')
                 a(href="#").site-btn--red.site-btn--img отправить
                   picture
                     source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
@@ -378,7 +379,7 @@ block content
               img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/gallery-img03.jpg" alt="img" ).b-lazy.gallery-block__img
 
 
-    .text-block.b-lazy.webp-img(data-webp="./img/text-block-3.webp" data-img="./img/text-block-3.png")
+    .text-block.text-block--service.b-lazy.webp-img(data-webp="./img/text-block-3.webp" data-img="./img/text-block-3.png")
       .text-block__inner.site-container
         .text-block__content
           .text-block__title.site-title2 Порядок выведения из запойного состояния и лечения запоя:
@@ -392,9 +393,9 @@ block content
             p В случае длительного употребления алкоголя рекомендуем обратиться в медицинскую клинику «Практик» в Москве, среди наших услуг по лечению различных зависимостей, основной является выведение из запоя в условиях дома или стационара. Злоупотребление алкогольными продуктами одна из самых тяжелых болезней, которые трудно поддаются терапевтическому воздействию. Если человек самостоятельно не контролирует количество выпитого и не может перестать употреблять алкоголь на протяжении длительного времени, ему нужна помощь. Наша клиника лечения алкоголизма «Практик» проведет срочный вывод из запоя в Москве на дому или в стационаре, можете обращаться в любое время суток, при вызове на дом бригада прибудет в кротчайшие сроки и окажет квалифицированную и профессиональную помощь.
 
 
-    .motivated.b-lazy.webp-img(data-webp="./img/motivated-bg.webp"
+    .motivated.b-lazy.webp-img(data-webp="./img/motivated-bg-2.webp"
       data-webp-mobile="./img/motivated-bg-mobile.webp"
-      data-img="./img/motivated-bg.png"
+      data-img="./img/motivated-bg-2.png"
       data-img-mobile="./img/motivated-bg-mobile.png")
       .motivated__inner.site-container
         .motivated__content

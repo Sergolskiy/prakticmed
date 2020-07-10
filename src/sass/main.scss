@@ -75,6 +75,15 @@ body{
   color: #090909;
 }
 
+body.hidden{
+
+  @include for-992{
+    overflow: hidden;
+    position: fixed;
+  }
+
+}
+
 a{
   color: #090909;
 }
@@ -315,7 +324,7 @@ input{
 
   &__menu-link{
     font-weight: normal;
-    font-size: 10px;
+    font-size: 11px;
     position: relative;
     transition: 0.3s;
 
@@ -669,9 +678,15 @@ input{
   padding-top: 116px;
   position: relative;
   z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center top;
 
   @include for-992{
     padding-top: 70px;
+  }
+
+  @include for-768{
+    background-size: cover;
   }
 
   &__inner{
@@ -1070,7 +1085,9 @@ input{
 .service{
   padding-top: 90px;
   padding-bottom: 35px;
-  background-size: cover;
+  //background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 
   @include for-768{
     padding-top: 20px;
@@ -1175,8 +1192,10 @@ input{
 
 .about{
   padding-top: 90px;
-  padding-bottom: 160px;
+  padding-bottom: 140px;
   position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
 
   @include for-992{
     padding: 55px 0;
@@ -1186,7 +1205,7 @@ input{
   }
 
   &__title{
-    margin-bottom: 155px;
+    margin-bottom: 60px;
     max-width: 970px;
     position: relative;
     z-index: 2;
@@ -1199,11 +1218,17 @@ input{
 
   &__caption{
     font-weight: bold;
-    font-size: 14px;
-    line-height: 144.5%;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: justify;
+    letter-spacing: .01em;
+    max-width: 870px;
+    margin-bottom: 46px;
 
     @include for-992{
       margin-bottom: 35px;
+      font-size: 14px;
+      line-height: 144.5%;
     }
   }
 
@@ -1420,6 +1445,8 @@ input{
 
 .medicals{
   padding: 90px 0 40px;
+  background-repeat: no-repeat;
+  background-position: top center;
 
   @include for-992{
     padding: 60px 0 70px;
@@ -1529,16 +1556,22 @@ input{
 }
 
 .text-block{
-  padding: 136px 0 110px;
+  padding: 110px 0 90px;
   background: #F7FBFF;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  //background-size: auto 100%;
   background-position: center;
+
+  &--service{
+    padding: 129px 0 90px;
+  }
 
   @include for-992{
     background: #ebebeb !important;
     padding: 55px 0 75px;
   }
+
+
 
   &__inner{
     padding: 0 125px;
@@ -1690,9 +1723,9 @@ input{
 }
 
 .reviews{
-  padding: 100px 0;
+  padding: 93px 0;
   background-position: center;
-  background-size: auto 100%;
+  //background-size: auto 100%;
   background-repeat: no-repeat;
 
   @include for-992{
@@ -2034,7 +2067,7 @@ input{
   }
 
   &__menu-link{
-    font-size: 10px;
+    font-size: 11px;
     line-height: 10px;
     color: #090909;
     transition: .3s;
@@ -2206,11 +2239,12 @@ input{
 .motivated{
   background-color: #F7FBFF;
   background-repeat: no-repeat;
-  background-size: cover;
+  //background-size: cover;
   background-position: center center;
 
   &__inner{
     min-height: 577px;
+    min-height: 555px;
     display: flex;
     align-items: center;
     padding-top: 70px;
@@ -2308,7 +2342,7 @@ input{
 .one-procedure{
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  //background-size: cover;
   background-image: url("../img/one-procedure.svg");
 
   @include for-768{
@@ -2486,6 +2520,8 @@ input{
 }
 
 .programs{
+  background-repeat: no-repeat;
+  background-position: center top;
 
   &__inner{
     padding-top: 90px;
@@ -2756,7 +2792,7 @@ input{
 .help-block{
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  //background-size: cover;
   background-image: url("../img/one-procedure.svg");
   background-color: #F7FBFF;
 
@@ -3063,7 +3099,7 @@ input{
 .sentence{
     background-color: #F7FBFF;
     background-repeat: no-repeat;
-    background-size: cover;
+    //background-size: cover;
     background-position: center center;
 
   &__inner{
@@ -3135,11 +3171,11 @@ input{
 .home-procedure{
   background-color: #F7FBFF;
   background-repeat: no-repeat;
-  background-size: cover;
+  //background-size: cover;
   background-position: center center;
 
   &__inner{
-    padding-top: 100px;
+    padding-top: 64px;
 
     @include for-992{
       padding-top: 60px;
@@ -3289,7 +3325,7 @@ input{
 .license{
   background-color: #F7FBFF;
   background-repeat: no-repeat;
-  background-size: cover;
+  //background-size: cover;
   background-position: center center;
 
   @include from-992{
@@ -3371,7 +3407,7 @@ input{
 
   &__slider{
     width: 330px;
-    flex: 0 0 330px;
+    //flex: 0 0 330px;
     background: transparent;
 
     @include for-550{
@@ -3391,8 +3427,8 @@ input{
   }
 
   &__img{
-    width: 100%;
-    height: 100%;
+    //width: 100%;
+    //height: 100%;
     object-fit: contain;
   }
 
@@ -3582,11 +3618,12 @@ input{
 .price-block{
   background-color: #EBEBEB;
   background-repeat: no-repeat;
-  background-size: cover;
+  //background-size: cover;
   background-position: center center;
 
   &__inner{
     min-height: 565px;
+    min-height: 656px;
     display: flex;
     align-items: center;
 
@@ -3598,7 +3635,9 @@ input{
   }
 
   &__content{
-
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
 
     @include for-550{
       width: 100%;
@@ -3692,8 +3731,12 @@ input{
     justify-content: center;
     align-items: center;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     margin-top: 150px;
+
+    @include for-768{
+      margin: 75px auto;
+    }
   }
 
   &__inner{
@@ -3821,6 +3864,10 @@ input{
     @include for-1200{
 
       padding: 90px 50px 85px;
+    }
+
+    @include for-420{
+      padding: 70px 0px 65px;
     }
   }
 

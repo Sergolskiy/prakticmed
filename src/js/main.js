@@ -265,6 +265,11 @@ $(document).ready(function () {
     $(this).addClass('active');
   });
 
+  $('form a').click(function (e) {
+    e.preventDefault();
+    $(this).prev().click();
+  });
+
   $('.phone').inputmask("+7 (999) 999-99-99");
   if($(document).find('#licen-slider').length > 0) {
     $('#licen-slider').magnificPopup({
@@ -349,27 +354,33 @@ $(document).ready(function () {
       },300);
     });
   }
-
+  $('.slick-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    setTimeout(function () {
+      bLazy.revalidate();
+    },300);
+  });
 
   /*popups start*/
   $(document).on('click', 'a[data-modal-class]', function (e) {
     e.preventDefault();
     var dataModalId = $(this).attr('data-modal-class');
     $('.popup.' + dataModalId + '').addClass('open');
+    $('body').addClass('hidden');
     setTimeout(function () {
-
       bLazy.revalidate();
     },500)
   });
 
   $(document).on('click', '.popup__close', function (e) {
     $('.popup ').removeClass('open');
+    $('body').removeClass('hidden');
   });
 
   $(document).on('click', '.popup', function (e) {
 
     if(e.target.classList[0] == "popup") {
       $('.popup ').removeClass('open');
+      $('body').removeClass('hidden');
     }
   });
   /*popups end*/

@@ -29,16 +29,17 @@ block content
           a(href="#").top-block__link Кодирование от наркомании
           a(href="#").top-block__link Кодирование от алкоголизма
           a(href="#").top-block__link Лечение депрессии и психозов
-        a(href="#").top-block__btn.tablet.site-btn ОБРАТНЫЙ ЗВОНОК
+        a(href="#" data-modal-class="callback").top-block__btn.tablet.site-btn ОБРАТНЫЙ ЗВОНОК
 
       .top-block__form
         .top-block__form-bg.b-lazy.webp-img(data-webp="./img/top-romb-bg.webp" data-img="./img/top-romb-bg.png")
         .top-block__form-inner
           .top-block__form-title Оставить заявку <b>НА БЕСПЛАТНУЮ</b> консультацию нарколога
-          form.top-block__form-i
-            input(type="text" placeholder="Ваше имя")
-            input(type="text" placeholder="+7 (___) ___-__-__").phone
-            a(href="#").top-block__form-btn.site-btn--red отправить
+          form.top-block__form-i(acton="#")
+            input(type="text" placeholder="Ваше имя" required)
+            input(type="text" inputmode="numeric" placeholder="+7 (___) ___-__-__").phone
+            button(style='display: none;')
+            a(href="#" data-modal-class="callback").top-block__form-btn.site-btn--red отправить
           .top-block__form-capt Ваши данные не попадут к третьим лицам и останутся конфиденциальны.
 
       .site-widget
@@ -132,7 +133,7 @@ block content
     .about.b-lazy.webp-img(data-webp="./img/about-bg.webp" data-img="./img/about-bg.png")
       .about__inner.site-container
         .about__title.site-title2 Частный наркологический центр «Практик» — экстренная наркологическая помощь в Москве
-        .about__caption.tablet Основой для построения программ терапии в клинике «Практик» в Москве взято всемирно известную программу «12 шагов».
+        .about__caption Основой для построения программ терапии в клинике «Практик» в Москве взято всемирно известную программу «12 шагов».
         .about__romb-right.b-lazy.webp-img(data-webp="./img/about-romb-2.webp" data-img="./img/about-romb-2.png" data-webp-mobile='./img/about-romb-mob.webp' data-img-mobile='./img/about-romb-mob.png')
         .about__romb-left.b-lazy.webp-img(data-webp="./img/about-romb.webp" data-img="./img/about-romb.png")
         .about__txt
@@ -174,9 +175,10 @@ block content
           .help-block__caption И ПОЛУЧИТЕ первичную консультацию <strong>бесплатно</strong> <br> <br> <br>
           .help-block__form
             form.top-block__form-i.help-block__form-i
-              input(type="text" placeholder="Ваше имя")
-              input(type="text" placeholder="+7 (___) ___-__-__").phone
+              input(type="text" placeholder="Ваше имя" required)
+              input(type="text" inputmode="numeric" placeholder="+7 (___) ___-__-__").phone
               .form__btn-wrap.site-btn--img-wrap
+                button(style='display: none;')
                 a(href="#").site-btn--red.site-btn--img отправить
                   picture
                     source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
@@ -190,22 +192,22 @@ block content
         .medicals__items.row
           .medicals__item.col
             .medicals__img
-              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group.png").b-lazy
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group.png" alt='img').b-lazy
             .medicals__name Степнов <br> Виталий Отчество
             .medicals__caption Главный врач
           .medicals__item.col
             .medicals__img
-              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group (1).png").b-lazy
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group (1).png" alt='img').b-lazy
             .medicals__name Миронова  <br> Галина Отчество
             .medicals__caption Психиатр нарколог
           .medicals__item.col
             .medicals__img
-              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group (2).png").b-lazy
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group (2).png" alt='img').b-lazy
             .medicals__name Баринов  <br> Виктор Отчество
             .medicals__caption Главный врач
           .medicals__item.col
             .medicals__img
-              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group (3).png").b-lazy
+              img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-blazy="./img/medicals/Mask Group (3).png" alt='img').b-lazy
             .medicals__name Крестова  <br> Ольга Отчество
             .medicals__caption Психиатр нарколог
           .medicals__item.col
@@ -245,7 +247,7 @@ block content
             .motivated__phone
               a(href="tel:88003012803") тел. 8 (800) 301-28-03
             .motivated__btn.site-btn--img-wrap
-              a(href="#").motivated__btn-i.site-btn.site-btn--red.site-btn--img заказать звонок
+              a(href="#" data-modal-class="callback").motivated__btn-i.site-btn.site-btn--red.site-btn--img заказать звонок
                 picture
                   source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
                   source(srcset="./img/icon/blokno-ico.png" type="image/png")
@@ -319,7 +321,7 @@ block content
             .motivated__phone
               a(href="tel:88003012803") тел. 8 (800) 301-28-03
             .motivated__btn.site-btn--img-wrap
-              a(href="#").motivated__btn-i.site-btn.site-btn--red.site-btn--img заказать звонок
+              a(href="#" data-modal-class="callback").motivated__btn-i.site-btn.site-btn--red.site-btn--img заказать звонок
                 picture
                   source(srcset="./img/icon/blokno-ico.webp" type="image/webp")
                   source(srcset="./img/icon/blokno-ico.png" type="image/png")
