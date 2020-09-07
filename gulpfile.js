@@ -64,7 +64,7 @@ gulp.task('js', () => {
 gulp.task('css-libs', () => {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
-      // 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+      'node_modules/owl.carousel/dist/assets/owl.carousel.css',
       'node_modules/slick-carousel/slick/slick.css',
       // 'node_modules/bootstrap/dist/css/bootstrap.css',
       // 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
@@ -91,7 +91,7 @@ gulp.task('js-libs', () => {
       // 'src/js/sine-waves.js',
       'node_modules/blazy/blazy.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
-      // 'node_modules/owl.carousel/dist/owl.carousel.js',
+      'node_modules/owl.carousel/dist/owl.carousel.js',
       'node_modules/slick-carousel/slick/slick.js',
       'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
     ])
